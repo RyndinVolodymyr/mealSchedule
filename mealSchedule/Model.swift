@@ -67,6 +67,9 @@ func chekStatus(array: [String: Any]) -> Bool {
     for (index, value) in dicChek.enumerated() {
         print(index, value)
     }
+    
+    //MARK: Check count settings
+    
     if dicChek.count == 6 {
         return true
     } else {
