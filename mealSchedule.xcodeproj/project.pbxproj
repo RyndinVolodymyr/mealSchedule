@@ -7,21 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DA97A6B4226C9C6C00F0DC9A /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA97A6B3226C9C6C00F0DC9A /* MainViewController.swift */; };
 		DAAFC7E0225CD6B800CDA656 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAFC7DF225CD6B800CDA656 /* AppDelegate.swift */; };
-		DAAFC7E2225CD6B800CDA656 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAFC7E1225CD6B800CDA656 /* ViewController.swift */; };
+		DAAFC7E2225CD6B800CDA656 /* FirstSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAFC7E1225CD6B800CDA656 /* FirstSettingsViewController.swift */; };
 		DAAFC7E5225CD6B800CDA656 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAAFC7E3225CD6B800CDA656 /* Main.storyboard */; };
 		DAAFC7E7225CD6BA00CDA656 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAAFC7E6225CD6BA00CDA656 /* Assets.xcassets */; };
 		DAAFC7EA225CD6BA00CDA656 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAAFC7E8225CD6BA00CDA656 /* LaunchScreen.storyboard */; };
+		DAE55B14226B237C00BF0F3D /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE55B13226B237C00BF0F3D /* Model.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DA97A6B3226C9C6C00F0DC9A /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		DAAFC7DC225CD6B800CDA656 /* mealSchedule.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mealSchedule.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAAFC7DF225CD6B800CDA656 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DAAFC7E1225CD6B800CDA656 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DAAFC7E1225CD6B800CDA656 /* FirstSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstSettingsViewController.swift; sourceTree = "<group>"; };
 		DAAFC7E4225CD6B800CDA656 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DAAFC7E6225CD6BA00CDA656 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DAAFC7E9225CD6BA00CDA656 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DAAFC7EB225CD6BA00CDA656 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DAE55B13226B237C00BF0F3D /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +39,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DA97A6B5226CA06D00F0DC9A /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				DA97A6B3226C9C6C00F0DC9A /* MainViewController.swift */,
+				DAAFC7E1225CD6B800CDA656 /* FirstSettingsViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
 		DAAFC7D3225CD6B800CDA656 = {
 			isa = PBXGroup;
 			children = (
@@ -54,8 +67,9 @@
 		DAAFC7DE225CD6B800CDA656 /* mealSchedule */ = {
 			isa = PBXGroup;
 			children = (
+				DA97A6B5226CA06D00F0DC9A /* View Controllers */,
+				DAE55B13226B237C00BF0F3D /* Model.swift */,
 				DAAFC7DF225CD6B800CDA656 /* AppDelegate.swift */,
-				DAAFC7E1225CD6B800CDA656 /* ViewController.swift */,
 				DAAFC7E3225CD6B800CDA656 /* Main.storyboard */,
 				DAAFC7E6225CD6BA00CDA656 /* Assets.xcassets */,
 				DAAFC7E8225CD6BA00CDA656 /* LaunchScreen.storyboard */,
@@ -135,8 +149,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DAAFC7E2225CD6B800CDA656 /* ViewController.swift in Sources */,
+				DAE55B14226B237C00BF0F3D /* Model.swift in Sources */,
+				DAAFC7E2225CD6B800CDA656 /* FirstSettingsViewController.swift in Sources */,
 				DAAFC7E0225CD6B800CDA656 /* AppDelegate.swift in Sources */,
+				DA97A6B4226C9C6C00F0DC9A /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,8 +299,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 6Z64PE7758;
+				DEVELOPMENT_TEAM = U8VLNNF2C5;
 				INFOPLIST_FILE = mealSchedule/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -301,8 +318,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 6Z64PE7758;
+				DEVELOPMENT_TEAM = U8VLNNF2C5;
 				INFOPLIST_FILE = mealSchedule/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
