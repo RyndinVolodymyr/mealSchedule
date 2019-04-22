@@ -10,6 +10,74 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--View Controller-->
+        <scene sceneID="OYf-Ou-E0r">
+            <objects>
+                <viewController id="Jga-Iv-lgQ" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="beq-9b-51m">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BXd-lJ-c9B">
+                                <rect key="frame" x="20" y="747" width="75" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="HTp-QM-2cc"/>
+                                    <constraint firstAttribute="width" constant="75" id="K6A-MN-4HX"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="75" id="U8O-Hm-kZ9"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="75" id="zfx-NI-B03"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="BACK" backgroundImage="return">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Сколько тренировок в неделю?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ye7-7n-0Hx">
+                                <rect key="frame" x="20" y="84" width="374" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Uhy-5x-C0N"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="cwo-gI-0Pq"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="LH0-dS-CHz">
+                                <rect key="frame" x="20" y="144" width="374" height="41"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="OBO-JK-dq8"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="1"/>
+                                    <segment title="2"/>
+                                    <segment title="3"/>
+                                    <segment title="4"/>
+                                    <segment title="5"/>
+                                    <segment title="6"/>
+                                </segments>
+                                <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <action selector="destinySegControl:" destination="BYZ-38-t0r" eventType="valueChanged" id="ewD-rD-mxI"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ppl-Z4-v00" firstAttribute="trailing" secondItem="LH0-dS-CHz" secondAttribute="trailing" constant="20" id="8B5-Be-mpB"/>
+                            <constraint firstItem="LH0-dS-CHz" firstAttribute="leading" secondItem="ppl-Z4-v00" secondAttribute="leading" constant="20" id="BfQ-8U-8nY"/>
+                            <constraint firstItem="BXd-lJ-c9B" firstAttribute="leading" secondItem="ppl-Z4-v00" secondAttribute="leading" constant="20" id="NAe-Uq-FDH"/>
+                            <constraint firstItem="ye7-7n-0Hx" firstAttribute="leading" secondItem="ppl-Z4-v00" secondAttribute="leading" constant="20" id="VPV-Rq-fgK"/>
+                            <constraint firstItem="ppl-Z4-v00" firstAttribute="bottom" secondItem="BXd-lJ-c9B" secondAttribute="bottom" constant="40" id="dHx-yR-fq7"/>
+                            <constraint firstItem="ppl-Z4-v00" firstAttribute="trailing" secondItem="ye7-7n-0Hx" secondAttribute="trailing" constant="20" id="hIP-a4-t4U"/>
+                            <constraint firstItem="ye7-7n-0Hx" firstAttribute="top" secondItem="ppl-Z4-v00" secondAttribute="top" constant="40" id="kiD-S6-P29"/>
+                            <constraint firstItem="LH0-dS-CHz" firstAttribute="top" secondItem="ye7-7n-0Hx" secondAttribute="bottom" constant="20" id="tnh-kd-g9k"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ppl-Z4-v00"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XCN-hA-K5j" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2020" y="119"/>
+        </scene>
         <!--Main View Controller-->
         <scene sceneID="OZg-ag-jhu">
             <objects>
@@ -50,6 +118,9 @@
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="75" id="zFM-2t-ALw"/>
                                 </constraints>
                                 <state key="normal" title="Button" image="weightlifter"/>
+                                <connections>
+                                    <segue destination="Jga-Iv-lgQ" kind="presentation" modalTransitionStyle="coverVertical" id="4da-Ah-3XJ"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="arU-4L-9XM">
                                 <rect key="frame" x="20" y="179" width="75" height="75"/>
@@ -73,7 +144,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="arU-4L-9XM" firstAttribute="leading" secondItem="KDJ-H5-iDB" secondAttribute="leading" constant="20" id="0Cf-ka-lDR"/>
                             <constraint firstItem="8Fh-RI-ZKP" firstAttribute="leading" secondItem="KDJ-H5-iDB" secondAttribute="leading" constant="20" id="C62-oI-2bl"/>
@@ -128,6 +199,7 @@
                                     <segment title="Норма"/>
                                     <segment title="Набор массы"/>
                                 </segments>
+                                <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
                                     <action selector="destinySegControl:" destination="BYZ-38-t0r" eventType="valueChanged" id="gxI-9m-OCv"/>
                                 </connections>
@@ -245,7 +317,9 @@
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="T6i-rf-emF" secondAttribute="height" multiplier="77:30" id="kLO-2b-uJF"/>
                                 </constraints>
-                                <state key="normal" title="Настроить"/>
+                                <state key="normal" title="Настроить">
+                                    <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dl5-ob-g5y">
                                 <rect key="frame" x="20" y="354" width="77" height="30"/>
@@ -253,7 +327,9 @@
                                     <constraint firstAttribute="width" secondItem="Dl5-ob-g5y" secondAttribute="height" multiplier="77:30" id="5hd-9S-8Lc"/>
                                     <constraint firstAttribute="height" constant="30" id="WcS-QA-Sa9"/>
                                 </constraints>
-                                <state key="normal" title="Настроить"/>
+                                <state key="normal" title="Настроить">
+                                    <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9CJ-XR-Jqq">
                                 <rect key="frame" x="169.5" y="624" width="75" height="75"/>
@@ -286,7 +362,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="GIj-IL-vsd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="0e9-4U-TIH"/>
                             <constraint firstItem="9pu-lA-nWO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="2RT-nz-F4u"/>
