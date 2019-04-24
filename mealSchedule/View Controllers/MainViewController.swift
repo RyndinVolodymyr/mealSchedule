@@ -12,13 +12,9 @@ class MainViewController: UIViewController {
     
     
     @IBOutlet weak var settingsButton: UIButton!
-    
     @IBOutlet weak var muteButton: UIButton!
-    
     @IBOutlet weak var mealButton: UIButton!
-    
     @IBOutlet weak var sportSettingsButton: UIButton!
-    
     @IBOutlet weak var infoLabel: UILabel!
     
     override func viewDidLoad() {

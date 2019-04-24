@@ -13,35 +13,20 @@ import UIKit
 class FirstSettingsViewController: UIViewController {
     
     @IBOutlet weak var destinyLabel: UILabel!
-    
     @IBOutlet weak var coockingChooseLabel: UILabel!
-    
     @IBOutlet weak var trainingLabel: UILabel!
-    
     @IBOutlet weak var quantFoodLabel: UILabel!
-    
     @IBOutlet weak var weakUpLabel: UILabel!
-    
     @IBOutlet weak var sleepLabel: UILabel!
-    
     @IBOutlet weak var foodCookSwitch: UISwitch!
-    
     @IBOutlet weak var trainingSwitch: UISwitch!
-    
     @IBOutlet weak var coockingButtonHide: UIButton!
-    
     @IBOutlet weak var trainingButtonHide: UIButton!
-    
     @IBOutlet weak var saveButton: UIButton!
-    
     @IBOutlet weak var quantFoodPicker: UIPickerView!
-    
     @IBOutlet weak var weakUpPicker: UIPickerView!
-    
     @IBOutlet weak var sleepPicker: UIPickerView!
-    
     @IBOutlet weak var destinyChooseSegment: UISegmentedControl!
-    
     
     override func viewWillAppear(_ animated: Bool) {
         
@@ -51,7 +36,6 @@ class FirstSettingsViewController: UIViewController {
         
         showHiddenButtons(but: coockingButtonHide, swt: foodCookSwitch)
         showHiddenButtons(but: trainingButtonHide, swt: trainingSwitch)
-     
     }
    
     override func viewDidLoad() {
@@ -71,8 +55,6 @@ class FirstSettingsViewController: UIViewController {
         self.foodCookSwitch.addTarget(self, action:#selector(switchShowButtonFood(param:)), for: .valueChanged)
         self.trainingSwitch.addTarget(self, action: #selector(switchShowButtonTrain(param:)), for: .valueChanged)
     }
-    
-    
     //MARK: OBJ Func creating
     
     @objc func switchShowButtonTrain(param: UISwitch) {
@@ -85,14 +67,12 @@ class FirstSettingsViewController: UIViewController {
     
 
     @IBAction func destinySegControl(_ sender: Any) {
-        
     }
     
     @IBAction func saveButton(_ sender: Any) {
         writeToUserDefaults()
         let ararar = userDefaults.dictionaryRepresentation()
         print(chekStatus(array: ararar))
-        
     }
 }
 
@@ -119,7 +99,6 @@ extension FirstSettingsViewController: UIPickerViewDelegate, UIPickerViewDataSou
         case weakUpPicker: return arrayWeakUp[row]
         case sleepPicker: return arraySleep[row]
         default: return "Shiieeeet"
-            
         }
     }
     
@@ -136,7 +115,6 @@ extension FirstSettingsViewController: UIPickerViewDelegate, UIPickerViewDataSou
     //MARK: User Defaults Read Settings
     
     func readFromUserDefaults() {
-        
         let userDefaults = UserDefaults.standard
         
         foodCookSwitch.isOn = userDefaults.bool(forKey: Token.foodCookSwitch.rawValue)
@@ -146,18 +124,16 @@ extension FirstSettingsViewController: UIPickerViewDelegate, UIPickerViewDataSou
         weakUpPicker.selectRow(userDefaults.integer(forKey: Token.weakUpPicker.rawValue), inComponent: 0, animated: true)
         sleepPicker.selectRow(userDefaults.integer(forKey: Token.sleepPicker.rawValue), inComponent: 0, animated: true)
     }
-    
      //MARK: User Defaults Write Settings
     
     func writeToUserDefaults() {
-        
         let userDefaults = UserDefaults.standard
         
         userDefaults.set(foodCookSwitch.isOn, forKey: Token.foodCookSwitch.rawValue)
         userDefaults.set(trainingSwitch.isOn, forKey: Token.trainingSwitch.rawValue)
         userDefaults.set(destinyChooseSegment.selectedSegmentIndex, forKey: Token.destinyChooseSegment.rawValue)
-     
         print("Saved to user def")
     }
 }
+
 

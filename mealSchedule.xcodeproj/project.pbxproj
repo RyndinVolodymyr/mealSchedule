@@ -7,16 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D09FCECC20FE20E434201FD1 /* Pods_mealSchedule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C27DDC223E20E4E1DB89B5AB /* Pods_mealSchedule.framework */; };
+		DA61B83B226F500D006703C2 /* AuthorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA61B83A226F500D006703C2 /* AuthorViewController.swift */; };
 		DA97A6B4226C9C6C00F0DC9A /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA97A6B3226C9C6C00F0DC9A /* MainViewController.swift */; };
 		DAAFC7E0225CD6B800CDA656 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAFC7DF225CD6B800CDA656 /* AppDelegate.swift */; };
 		DAAFC7E2225CD6B800CDA656 /* FirstSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAFC7E1225CD6B800CDA656 /* FirstSettingsViewController.swift */; };
 		DAAFC7E5225CD6B800CDA656 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAAFC7E3225CD6B800CDA656 /* Main.storyboard */; };
 		DAAFC7E7225CD6BA00CDA656 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAAFC7E6225CD6BA00CDA656 /* Assets.xcassets */; };
 		DAAFC7EA225CD6BA00CDA656 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAAFC7E8225CD6BA00CDA656 /* LaunchScreen.storyboard */; };
+		DAC50BC2226DBA1F00291A7F /* ThirdSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC50BC1226DBA1F00291A7F /* ThirdSettingViewController.swift */; };
+		DAD9B097226F5EEA00145E41 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DAD9B096226F5EEA00145E41 /* GoogleService-Info.plist */; };
+		DAD9B099226F754C00145E41 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD9B098226F754C00145E41 /* WelcomeViewController.swift */; };
 		DAE55B14226B237C00BF0F3D /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE55B13226B237C00BF0F3D /* Model.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0209E6E0940FB91B5D2BF7A2 /* Pods-mealSchedule.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mealSchedule.debug.xcconfig"; path = "Target Support Files/Pods-mealSchedule/Pods-mealSchedule.debug.xcconfig"; sourceTree = "<group>"; };
+		C27DDC223E20E4E1DB89B5AB /* Pods_mealSchedule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_mealSchedule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA61B83A226F500D006703C2 /* AuthorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorViewController.swift; sourceTree = "<group>"; };
 		DA97A6B3226C9C6C00F0DC9A /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		DAAFC7DC225CD6B800CDA656 /* mealSchedule.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mealSchedule.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAAFC7DF225CD6B800CDA656 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -25,7 +33,11 @@
 		DAAFC7E6225CD6BA00CDA656 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DAAFC7E9225CD6BA00CDA656 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DAAFC7EB225CD6BA00CDA656 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DAC50BC1226DBA1F00291A7F /* ThirdSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdSettingViewController.swift; sourceTree = "<group>"; };
+		DAD9B096226F5EEA00145E41 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../GoogleService-Info.plist"; sourceTree = "<group>"; };
+		DAD9B098226F754C00145E41 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		DAE55B13226B237C00BF0F3D /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		FD18B05F2C662547F18E6487 /* Pods-mealSchedule.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mealSchedule.release.xcconfig"; path = "Target Support Files/Pods-mealSchedule/Pods-mealSchedule.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +45,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D09FCECC20FE20E434201FD1 /* Pods_mealSchedule.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		177F6F0A8981A927DE56244E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C27DDC223E20E4E1DB89B5AB /* Pods_mealSchedule.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BD1B5D8D84E5FC22557580A7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0209E6E0940FB91B5D2BF7A2 /* Pods-mealSchedule.debug.xcconfig */,
+				FD18B05F2C662547F18E6487 /* Pods-mealSchedule.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		DA97A6B5226CA06D00F0DC9A /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				DA97A6B3226C9C6C00F0DC9A /* MainViewController.swift */,
 				DAAFC7E1225CD6B800CDA656 /* FirstSettingsViewController.swift */,
+				DAC50BC1226DBA1F00291A7F /* ThirdSettingViewController.swift */,
+				DA61B83A226F500D006703C2 /* AuthorViewController.swift */,
+				DAD9B098226F754C00145E41 /* WelcomeViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -53,6 +86,8 @@
 			children = (
 				DAAFC7DE225CD6B800CDA656 /* mealSchedule */,
 				DAAFC7DD225CD6B800CDA656 /* Products */,
+				BD1B5D8D84E5FC22557580A7 /* Pods */,
+				177F6F0A8981A927DE56244E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,6 +109,7 @@
 				DAAFC7E6225CD6BA00CDA656 /* Assets.xcassets */,
 				DAAFC7E8225CD6BA00CDA656 /* LaunchScreen.storyboard */,
 				DAAFC7EB225CD6BA00CDA656 /* Info.plist */,
+				DAD9B096226F5EEA00145E41 /* GoogleService-Info.plist */,
 			);
 			path = mealSchedule;
 			sourceTree = "<group>";
@@ -85,9 +121,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DAAFC7EE225CD6BA00CDA656 /* Build configuration list for PBXNativeTarget "mealSchedule" */;
 			buildPhases = (
+				1FB8C9DD87023CA77D0B6AD3 /* [CP] Check Pods Manifest.lock */,
 				DAAFC7D8225CD6B800CDA656 /* Sources */,
 				DAAFC7D9225CD6B800CDA656 /* Frameworks */,
 				DAAFC7DA225CD6B800CDA656 /* Resources */,
+				BC2D0B0EB987EDF34BE8FFB5 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -138,11 +176,65 @@
 			files = (
 				DAAFC7EA225CD6BA00CDA656 /* LaunchScreen.storyboard in Resources */,
 				DAAFC7E7225CD6BA00CDA656 /* Assets.xcassets in Resources */,
+				DAD9B097226F5EEA00145E41 /* GoogleService-Info.plist in Resources */,
 				DAAFC7E5225CD6B800CDA656 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1FB8C9DD87023CA77D0B6AD3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-mealSchedule-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BC2D0B0EB987EDF34BE8FFB5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-mealSchedule/Pods-mealSchedule-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-mealSchedule/Pods-mealSchedule-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		DAAFC7D8225CD6B800CDA656 /* Sources */ = {
@@ -152,7 +244,10 @@
 				DAE55B14226B237C00BF0F3D /* Model.swift in Sources */,
 				DAAFC7E2225CD6B800CDA656 /* FirstSettingsViewController.swift in Sources */,
 				DAAFC7E0225CD6B800CDA656 /* AppDelegate.swift in Sources */,
+				DA61B83B226F500D006703C2 /* AuthorViewController.swift in Sources */,
+				DAC50BC2226DBA1F00291A7F /* ThirdSettingViewController.swift in Sources */,
 				DA97A6B4226C9C6C00F0DC9A /* MainViewController.swift in Sources */,
+				DAD9B099226F754C00145E41 /* WelcomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,17 +391,18 @@
 		};
 		DAAFC7EF225CD6BA00CDA656 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0209E6E0940FB91B5D2BF7A2 /* Pods-mealSchedule.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = U8VLNNF2C5;
+				DEVELOPMENT_TEAM = 6Z64PE7758;
 				INFOPLIST_FILE = mealSchedule/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = Ryndincode.mealSchedule;
+				PRODUCT_BUNDLE_IDENTIFIER = RyndinVI.mealSchedule;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -315,17 +411,18 @@
 		};
 		DAAFC7F0225CD6BA00CDA656 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FD18B05F2C662547F18E6487 /* Pods-mealSchedule.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = U8VLNNF2C5;
+				DEVELOPMENT_TEAM = 6Z64PE7758;
 				INFOPLIST_FILE = mealSchedule/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = Ryndincode.mealSchedule;
+				PRODUCT_BUNDLE_IDENTIFIER = RyndinVI.mealSchedule;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
