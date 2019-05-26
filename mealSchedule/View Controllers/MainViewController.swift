@@ -7,9 +7,11 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseDatabase
+import FirebaseMessaging
 
 class MainViewController: UIViewController {
-    
     
     @IBOutlet weak var settingsButton: UIButton!
     @IBOutlet weak var muteButton: UIButton!
@@ -20,15 +22,31 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let token: [String: AnyObject] = [Messaging.messaging().fcmToken!: Messaging.messaging().fcmToken as AnyObject]
         
-        if chekStatus(array: userDefaults.dictionaryRepresentation()) {
-             infoLabel.text = "Setting Status" + " Saved"
-        } else {
-            infoLabel.text = "Settings Status" + " NOT Saved"
-        }
-        
+        self.postToken(tokenF: token)
     }
+    
+    //MARK: Firebase Messaging Token function
+    
+    func postToken(tokenF: [String: AnyObject]) {
+        print("FCM Token \(tokenF)")
+        
+        let dbRef = Database.database().reference()
+        dbRef.child("users/\(key ?? "AutoId")/fcmToken").child(Messaging.messaging().fcmToken!).setValue(tokenF)
+    }
+    
+    @IBAction func logOutAction(_ sender: Any) {
+        do{
+            try Auth.auth().signOut()
+        } catch {
+            print("Eror in log out action \(error)")
+        }
+    }
+    
+    @IBAction func FirstSettViewContrShow(_ sender: UIButton) {
 
+    }
 }
 
-// COMMIzt tot git hub
+

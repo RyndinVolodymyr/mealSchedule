@@ -6,9 +6,10 @@
 //  Copyright © 2019 com.ryndinvi. All rights reserved.
 //
 
-
-
 import UIKit
+import FirebaseDatabase
+import Firebase
+import FBSDKLoginKit
 
 class FirstSettingsViewController: UIViewController {
     
@@ -55,7 +56,7 @@ class FirstSettingsViewController: UIViewController {
         self.foodCookSwitch.addTarget(self, action:#selector(switchShowButtonFood(param:)), for: .valueChanged)
         self.trainingSwitch.addTarget(self, action: #selector(switchShowButtonTrain(param:)), for: .valueChanged)
     }
-    //MARK: OBJ Func creating
+    //MARK: OBJC Func creating
     
     @objc func switchShowButtonTrain(param: UISwitch) {
         showHiddenButtons(but: trainingButtonHide, swt: param)
@@ -65,13 +66,20 @@ class FirstSettingsViewController: UIViewController {
         showHiddenButtons(but: coockingButtonHide, swt: param)
     }
     
-
     @IBAction func destinySegControl(_ sender: Any) {
     }
     
     @IBAction func saveButton(_ sender: Any) {
         writeToUserDefaults()
         let ararar = userDefaults.dictionaryRepresentation()
+        
+        // MARK: Sending data to firebase
+        
+        let dataUP = ["id": key ?? "AutoId", "foodCookSwitch": foodCookSwitch.isOn, "trainingSwitch": trainingSwitch.isOn, "destinyChooseSegment": destinyChooseSegment.selectedSegmentIndex, "quantFoodPicker": quantFoodPicker.selectedRow(inComponent: 0), "weakUpPicker": weakUpPicker.selectedRow(inComponent: 0), "sleepPicker": sleepPicker.selectedRow(inComponent: 0)] as [String : Any]
+        
+    
+        ref.child("users").child(key!).updateChildValues(dataUP)
+        
         print(chekStatus(array: ararar))
     }
 }

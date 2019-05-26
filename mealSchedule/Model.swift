@@ -8,6 +8,22 @@
 
 import Foundation
 import UIKit
+import FirebaseDatabase
+import FirebaseStorage
+import FirebaseMessaging
+import FirebaseAuth
+
+
+
+
+
+//MARK: Creating reference for Firebase
+
+
+
+let key = Auth.auth().currentUser?.uid
+let ref = Database.database().reference()
+
 
 
 //MARK: Showing hiddien setings
@@ -75,5 +91,9 @@ func chekStatus(array: [String: Any]) -> Bool {
     } else {
         return false
     }
-    
 }
+
+//MARK: NSDate
+
+let date = NSDate()
+

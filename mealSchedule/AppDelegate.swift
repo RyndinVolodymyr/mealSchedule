@@ -8,14 +8,38 @@
 
 import UIKit
 import Firebase
+import FBSDKCoreKit
+import FirebaseAuth
+import UserNotifications
+import FirebaseMessaging
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, MessagingDelegate {
 
     var window: UIWindow?
     
+    @available(iOS 9.0, *)
+    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
+        FBSDKApplicationDelegate.sharedInstance()?.application(app, open: url, options: options)
+        return true
+    }
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         FirebaseApp.configure()
+        
+        if #available(iOS 10.0, *) {
+            //Notifications for iOS 10 and above
+            UNUserNotificationCenter.current().delegate = self as? UNUserNotificationCenterDelegate
+            let authOptions: UNAuthorizationOptions = [.alert, .badge, .sound]
+            UNUserNotificationCenter.current().requestAuthorization(options: authOptions, completionHandler: { (_, _) in })
+        } else {
+            let settings: UIUserNotificationSettings = UIUserNotificationSettings(types: [.alert, .badge, .sound], categories: nil)
+            application.registerUserNotificationSettings(settings)
+        }
+        
+        application.registerForRemoteNotifications()
+        
+        FBSDKApplicationDelegate.sharedInstance()?.application(application, didFinishLaunchingWithOptions: launchOptions)
         Auth.auth().addStateDidChangeListener { (auth, user) in
             if user == nil {
                 self.showModalAuth()
@@ -23,6 +47,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         return true
     }
+    
+    func messaging(_ messaging: Messaging, didRefreshRegistrations fcmToken: String) {
+        let vc: MainViewController = MainViewController()
+        let token: [String: AnyObject] = [Messaging.messaging().fcmToken!: Messaging.messaging().fcmToken as AnyObject]
+        vc.postToken(tokenF: token)
+    }
+    
     
     func showModalAuth() {
         let storyBoard = UIStoryboard(name: "Main", bundle: nil)
@@ -51,7 +82,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
-
-
 }
 

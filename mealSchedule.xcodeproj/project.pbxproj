@@ -10,6 +10,7 @@
 		D09FCECC20FE20E434201FD1 /* Pods_mealSchedule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C27DDC223E20E4E1DB89B5AB /* Pods_mealSchedule.framework */; };
 		DA61B83B226F500D006703C2 /* AuthorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA61B83A226F500D006703C2 /* AuthorViewController.swift */; };
 		DA97A6B4226C9C6C00F0DC9A /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA97A6B3226C9C6C00F0DC9A /* MainViewController.swift */; };
+		DAAE9C3522732B67002BB84D /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAE9C3422732B67002BB84D /* ForgotPasswordViewController.swift */; };
 		DAAFC7E0225CD6B800CDA656 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAFC7DF225CD6B800CDA656 /* AppDelegate.swift */; };
 		DAAFC7E2225CD6B800CDA656 /* FirstSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAFC7E1225CD6B800CDA656 /* FirstSettingsViewController.swift */; };
 		DAAFC7E5225CD6B800CDA656 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAAFC7E3225CD6B800CDA656 /* Main.storyboard */; };
@@ -17,7 +18,6 @@
 		DAAFC7EA225CD6BA00CDA656 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAAFC7E8225CD6BA00CDA656 /* LaunchScreen.storyboard */; };
 		DAC50BC2226DBA1F00291A7F /* ThirdSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC50BC1226DBA1F00291A7F /* ThirdSettingViewController.swift */; };
 		DAD9B097226F5EEA00145E41 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DAD9B096226F5EEA00145E41 /* GoogleService-Info.plist */; };
-		DAD9B099226F754C00145E41 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD9B098226F754C00145E41 /* WelcomeViewController.swift */; };
 		DAE55B14226B237C00BF0F3D /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE55B13226B237C00BF0F3D /* Model.swift */; };
 /* End PBXBuildFile section */
 
@@ -25,7 +25,9 @@
 		0209E6E0940FB91B5D2BF7A2 /* Pods-mealSchedule.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mealSchedule.debug.xcconfig"; path = "Target Support Files/Pods-mealSchedule/Pods-mealSchedule.debug.xcconfig"; sourceTree = "<group>"; };
 		C27DDC223E20E4E1DB89B5AB /* Pods_mealSchedule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_mealSchedule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA61B83A226F500D006703C2 /* AuthorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorViewController.swift; sourceTree = "<group>"; };
+		DA72172D22982A3F00C2AEF6 /* mealSchedule.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = mealSchedule.entitlements; sourceTree = "<group>"; };
 		DA97A6B3226C9C6C00F0DC9A /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		DAAE9C3422732B67002BB84D /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		DAAFC7DC225CD6B800CDA656 /* mealSchedule.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mealSchedule.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAAFC7DF225CD6B800CDA656 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DAAFC7E1225CD6B800CDA656 /* FirstSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstSettingsViewController.swift; sourceTree = "<group>"; };
@@ -35,7 +37,6 @@
 		DAAFC7EB225CD6BA00CDA656 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DAC50BC1226DBA1F00291A7F /* ThirdSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdSettingViewController.swift; sourceTree = "<group>"; };
 		DAD9B096226F5EEA00145E41 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../GoogleService-Info.plist"; sourceTree = "<group>"; };
-		DAD9B098226F754C00145E41 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		DAE55B13226B237C00BF0F3D /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		FD18B05F2C662547F18E6487 /* Pods-mealSchedule.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mealSchedule.release.xcconfig"; path = "Target Support Files/Pods-mealSchedule/Pods-mealSchedule.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -74,9 +75,9 @@
 			children = (
 				DA97A6B3226C9C6C00F0DC9A /* MainViewController.swift */,
 				DAAFC7E1225CD6B800CDA656 /* FirstSettingsViewController.swift */,
-				DAC50BC1226DBA1F00291A7F /* ThirdSettingViewController.swift */,
 				DA61B83A226F500D006703C2 /* AuthorViewController.swift */,
-				DAD9B098226F754C00145E41 /* WelcomeViewController.swift */,
+				DAAE9C3422732B67002BB84D /* ForgotPasswordViewController.swift */,
+				DAC50BC1226DBA1F00291A7F /* ThirdSettingViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -102,9 +103,10 @@
 		DAAFC7DE225CD6B800CDA656 /* mealSchedule */ = {
 			isa = PBXGroup;
 			children = (
+				DA72172D22982A3F00C2AEF6 /* mealSchedule.entitlements */,
+				DAAFC7DF225CD6B800CDA656 /* AppDelegate.swift */,
 				DA97A6B5226CA06D00F0DC9A /* View Controllers */,
 				DAE55B13226B237C00BF0F3D /* Model.swift */,
-				DAAFC7DF225CD6B800CDA656 /* AppDelegate.swift */,
 				DAAFC7E3225CD6B800CDA656 /* Main.storyboard */,
 				DAAFC7E6225CD6BA00CDA656 /* Assets.xcassets */,
 				DAAFC7E8225CD6BA00CDA656 /* LaunchScreen.storyboard */,
@@ -148,6 +150,14 @@
 				TargetAttributes = {
 					DAAFC7DB225CD6B800CDA656 = {
 						CreatedOnToolsVersion = 10.2;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -215,8 +225,12 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-mealSchedule/Pods-mealSchedule-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
@@ -224,8 +238,12 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
@@ -242,12 +260,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				DAE55B14226B237C00BF0F3D /* Model.swift in Sources */,
+				DAAE9C3522732B67002BB84D /* ForgotPasswordViewController.swift in Sources */,
 				DAAFC7E2225CD6B800CDA656 /* FirstSettingsViewController.swift in Sources */,
 				DAAFC7E0225CD6B800CDA656 /* AppDelegate.swift in Sources */,
 				DA61B83B226F500D006703C2 /* AuthorViewController.swift in Sources */,
 				DAC50BC2226DBA1F00291A7F /* ThirdSettingViewController.swift in Sources */,
 				DA97A6B4226C9C6C00F0DC9A /* MainViewController.swift in Sources */,
-				DAD9B099226F754C00145E41 /* WelcomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -394,6 +412,7 @@
 			baseConfigurationReference = 0209E6E0940FB91B5D2BF7A2 /* Pods-mealSchedule.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = mealSchedule/mealSchedule.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6Z64PE7758;
 				INFOPLIST_FILE = mealSchedule/Info.plist;
@@ -414,6 +433,7 @@
 			baseConfigurationReference = FD18B05F2C662547F18E6487 /* Pods-mealSchedule.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = mealSchedule/mealSchedule.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6Z64PE7758;
 				INFOPLIST_FILE = mealSchedule/Info.plist;
