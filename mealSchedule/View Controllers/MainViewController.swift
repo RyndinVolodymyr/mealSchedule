@@ -22,6 +22,9 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        showInfoLabelText()
+        firebaseGet()
+        
         let token: [String: AnyObject] = [Messaging.messaging().fcmToken!: Messaging.messaging().fcmToken as AnyObject]
         
         self.postToken(tokenF: token)
@@ -40,13 +43,20 @@ class MainViewController: UIViewController {
         do{
             try Auth.auth().signOut()
         } catch {
-            print("Eror in log out action \(error)")
+            print("Error in log out action \(error)")
         }
     }
     
     @IBAction func FirstSettViewContrShow(_ sender: UIButton) {
 
     }
+    
+    func showInfoLabelText() {
+        if nameInfo == nil || nameInfo!.isEmpty {
+            infoLabel.text = "Hello Friend, Welcome to Meal Shhedule! Your settings status is "
+        } else {
+            infoLabel.text = "Hello \(nameInfo ?? "Unknown Name"), Welcome to Meal Shhedule! Your settings status is "
+        }
+    }
 }
-
 

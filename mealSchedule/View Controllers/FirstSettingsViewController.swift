@@ -77,7 +77,6 @@ class FirstSettingsViewController: UIViewController {
         
         let dataUP = ["id": key ?? "AutoId", "foodCookSwitch": foodCookSwitch.isOn, "trainingSwitch": trainingSwitch.isOn, "destinyChooseSegment": destinyChooseSegment.selectedSegmentIndex, "quantFoodPicker": quantFoodPicker.selectedRow(inComponent: 0), "weakUpPicker": weakUpPicker.selectedRow(inComponent: 0), "sleepPicker": sleepPicker.selectedRow(inComponent: 0)] as [String : Any]
         
-    
         ref.child("users").child(key!).updateChildValues(dataUP)
         
         print(chekStatus(array: ararar))

@@ -13,18 +13,11 @@ import FirebaseStorage
 import FirebaseMessaging
 import FirebaseAuth
 
-
-
-
-
 //MARK: Creating reference for Firebase
 
-
-
+let nameInfo = Auth.auth().currentUser?.displayName
 let key = Auth.auth().currentUser?.uid
 let ref = Database.database().reference()
-
-
 
 //MARK: Showing hiddien setings
 
@@ -96,4 +89,18 @@ func chekStatus(array: [String: Any]) -> Bool {
 //MARK: NSDate
 
 let date = NSDate()
+
+//MARK: retrive data from firebase
+
+func firebaseGet() {
+    let fRef = Database.database().reference(withPath: "users")
+    
+    fRef.observe(.value, with: { snapshot in
+        
+        print("FIREBASE RETRIVE \(snapshot.value as Any)")
+    })
+}
+
+//MARK: Calculation parametrs
+
 
