@@ -1,0 +1,19 @@
+{
+  "name": "mealschedule",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RyndinVolodymyr/mealSchedule.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RyndinVolodymyr/mealSchedule/issues"
+  },
+  "homepage": "https://github.com/RyndinVolodymyr/mealSchedule#readme"
+}
