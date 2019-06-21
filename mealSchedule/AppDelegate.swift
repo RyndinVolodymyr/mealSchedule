@@ -17,6 +17,7 @@ import FirebaseMessaging
 class AppDelegate: UIResponder, UIApplicationDelegate, MessagingDelegate {
 
     var window: UIWindow?
+    let notificationDelegate = SampleNotificationDelegate()
     
     @available(iOS 9.0, *)
     func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
@@ -31,7 +32,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate, MessagingDelegate {
             //Notifications for iOS 10 and above
             UNUserNotificationCenter.current().delegate = self as? UNUserNotificationCenterDelegate
             let authOptions: UNAuthorizationOptions = [.alert, .badge, .sound]
+            let center = UNUserNotificationCenter.current()
+            center.delegate = notificationDelegate
+            let openAction = UNNotificationAction(identifier: "OpenNotification", title: NSLocalizedString("Пора Кушать", comment: "Прием Пищи"), options: UNNotificationActionOptions.foreground)
+            let deafultCategory = UNNotificationCategory(identifier: "CustomSamplePush", actions: [openAction], intentIdentifiers: [], options: [])
+            center.setNotificationCategories(Set([deafultCategory]))
             UNUserNotificationCenter.current().requestAuthorization(options: authOptions, completionHandler: { (_, _) in })
+            
         } else {
             let settings: UIUserNotificationSettings = UIUserNotificationSettings(types: [.alert, .badge, .sound], categories: nil)
             application.registerUserNotificationSettings(settings)
@@ -47,18 +54,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate, MessagingDelegate {
         }
         return true
     }
-    
-    func messaging(_ messaging: Messaging, didRefreshRegistrations fcmToken: String) {
-        let vc: MainViewController = MainViewController()
-        let token: [String: AnyObject] = [Messaging.messaging().fcmToken!: Messaging.messaging().fcmToken as AnyObject]
-        vc.postToken(tokenF: token)
-    }
-    
-    
+
     func showModalAuth() {
         let storyBoard = UIStoryboard(name: "Main", bundle: nil)
         let newVC = storyBoard.instantiateViewController(withIdentifier: "AuthorViewController") as! AuthorViewController
         self.window?.rootViewController?.present(newVC, animated: true, completion: nil)
+    }
+    
+    func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+        let deviceTokenString = deviceToken.reduce("", {$0 + String(format: "%02X", $1)})
+        print("APNs device token: \(deviceTokenString)")
     }
 
     func applicationWillResignActive(_ application: UIApplication) {

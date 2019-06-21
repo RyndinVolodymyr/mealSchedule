@@ -24,19 +24,6 @@ class MainViewController: UIViewController {
         
         showInfoLabelText()
         firebaseGet()
-        
-        let token: [String: AnyObject] = [Messaging.messaging().fcmToken!: Messaging.messaging().fcmToken as AnyObject]
-        
-        self.postToken(tokenF: token)
-    }
-    
-    //MARK: Firebase Messaging Token function
-    
-    func postToken(tokenF: [String: AnyObject]) {
-        print("FCM Token \(tokenF)")
-        
-        let dbRef = Database.database().reference()
-        dbRef.child("users/\(key ?? "AutoId")/fcmToken").child(Messaging.messaging().fcmToken!).setValue(tokenF)
     }
     
     @IBAction func logOutAction(_ sender: Any) {

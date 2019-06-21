@@ -75,7 +75,7 @@ class FirstSettingsViewController: UIViewController {
         
         // MARK: Sending data to firebase
         
-        let dataUP = ["id": key ?? "AutoId", "foodCookSwitch": foodCookSwitch.isOn, "trainingSwitch": trainingSwitch.isOn, "destinyChooseSegment": destinyChooseSegment.selectedSegmentIndex, "quantFoodPicker": quantFoodPicker.selectedRow(inComponent: 0), "weakUpPicker": weakUpPicker.selectedRow(inComponent: 0), "sleepPicker": sleepPicker.selectedRow(inComponent: 0)] as [String : Any]
+        let dataUP = ["id": key ?? "AutoId", "foodCookSwitch": foodCookSwitch.isOn, "trainingSwitch": trainingSwitch.isOn, "destinyChooseSegment": destinyChooseSegment.selectedSegmentIndex, "quantFoodPicker": quantFoodPicker.selectedRow(inComponent: 0), "weakUpPicker": weakUpPicker.selectedRow(inComponent: 0), "sleepPicker": sleepPicker.selectedRow(inComponent: 0), "FCMToken": token] as [String : Any]
         
         ref.child("users").child(key!).updateChildValues(dataUP)
         
@@ -110,7 +110,6 @@ extension FirstSettingsViewController: UIPickerViewDelegate, UIPickerViewDataSou
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        
         switch pickerView {
         case quantFoodPicker: userDefaults.set(arrayEating[row], forKey: Token.quantFoodPicker.rawValue)
         case weakUpPicker: userDefaults.set(arrayWeakUp[row], forKey: Token.weakUpPicker.rawValue)

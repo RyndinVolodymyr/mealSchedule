@@ -15,6 +15,7 @@ import FirebaseAuth
 
 //MARK: Creating reference for Firebase
 
+let token: [String: AnyObject] = [Messaging.messaging().fcmToken!: Messaging.messaging().fcmToken as AnyObject]
 let nameInfo = Auth.auth().currentUser?.displayName
 let key = Auth.auth().currentUser?.uid
 let ref = Database.database().reference()
@@ -40,6 +41,7 @@ let arraySleep = ["20", "21", "22", "23", "24", "01", "02", "03"]
 var dicChek = [String : Any]()
 
 //MARK: UserDefaults token settings
+
 let userDefaults = UserDefaults.standard
 
 enum Token: String {
