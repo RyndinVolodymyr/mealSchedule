@@ -33,22 +33,25 @@ class AuthorViewController: UIViewController {
         }
     }
     
+    //MARK: Creating FB standart button
+    let facebookButton: FBSDKLoginButton = {
+        let buttonFb = FBSDKLoginButton()
+        buttonFb.translatesAutoresizingMaskIntoConstraints = false
+        buttonFb.readPermissions = ["email", "public_profile"]
+        return buttonFb
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         nameLabel.delegate = self
         emaillabel.delegate = self
         passwordLabel.delegate = self
+        facebookButton.delegate = self
         
-        //MARK: Creating FB standart button
-        
-        let buttonFB = FBSDKLoginButton()
-        buttonFB.frame.origin.x = 70
-        buttonFB.frame.origin.y = 450
-        
-        buttonFB.delegate = self
-        buttonFB.readPermissions = ["email", "public_profile"]
-        self.view.addSubview(buttonFB)
+        view.addSubview(facebookButton)
+        setupLayout()
+    
     }
     
     @IBAction func enterButton(_ sender: UIButton) {
@@ -59,6 +62,11 @@ class AuthorViewController: UIViewController {
         let alert = UIAlertController(title: "Ошибка", message: "Заполните все поля", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
         present(alert, animated: true, completion: nil)
+    }
+    
+    private func setupLayout() {
+        facebookButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        facebookButton.bottomAnchor.constraint(equalTo: enterButtonWeak.bottomAnchor, constant: 50).isActive = true
     }
 }
 
@@ -98,7 +106,7 @@ extension AuthorViewController: UITextFieldDelegate {
         return true
     }
 }
-//MARK: Facebook author button
+//MARK: Facebook author button extensions
 
 extension AuthorViewController: FBSDKLoginButtonDelegate {
     func loginButton(_ loginButton: FBSDKLoginButton!, didCompleteWith result: FBSDKLoginManagerLoginResult!, error: Error!) {
