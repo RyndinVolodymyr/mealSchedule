@@ -12,6 +12,8 @@ import FirebaseStorage
 import FirebaseMessaging
 import FirebaseAuth
 
+//MARK: Recipe arrays
+
 //let recipeNameArray = ["Похудение", "Норма", "Набор массы"]
 //let recipeImageArray = [UIImage(named: "dieta"), UIImage(named: "norma"), UIImage(named: "nabor")]
 
