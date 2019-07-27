@@ -12,8 +12,11 @@ import FirebaseStorage
 import FirebaseMessaging
 import FirebaseAuth
 
-//MARK: Creating reference for Firebase
+//let recipeNameArray = ["Похудение", "Норма", "Набор массы"]
+//let recipeImageArray = [UIImage(named: "dieta"), UIImage(named: "norma"), UIImage(named: "nabor")]
 
+//MARK: Creating reference for Firebase
+let recipeCellIdentif = "recipeCellIdentif"
 let token: [String: AnyObject] = [Messaging.messaging().fcmToken!: Messaging.messaging().fcmToken as AnyObject]
 let nameInfo = Auth.auth().currentUser?.displayName
 let key = Auth.auth().currentUser?.uid

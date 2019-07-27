@@ -304,21 +304,6 @@
             </objects>
             <point key="canvasLocation" x="512.79999999999995" y="1025.615763546798"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="bp2-p7-yJG">
-            <objects>
-                <viewController id="fXb-WL-OEq" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="nY9-xA-dY5">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="DP1-xC-OrY"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="6Ru-07-bYK" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1983" y="1037"/>
-        </scene>
         <!--First Settings View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -583,10 +568,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg3" translatesAutoresizingMaskIntoConstraints="NO" id="yB6-vi-UEy">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="640"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="yB6-vi-UEy" secondAttribute="height" multiplier="207:448" id="umw-dB-Un9"/>
-                                </constraints>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                             </imageView>
                             <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CCt-6T-PVe">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="811.66666666666663"/>

@@ -18,7 +18,6 @@
 		DA6E9D7A22BD03A1007572F9 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA6E9D7822BD03A1007572F9 /* MainInterface.storyboard */; };
 		DA6E9D7E22BD03A1007572F9 /* Content.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = DA6E9D7022BD03A1007572F9 /* Content.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		DA97A6B4226C9C6C00F0DC9A /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA97A6B3226C9C6C00F0DC9A /* MainViewController.swift */; };
-		DAA2367E22EB2E8C00AA2A22 /* RecipesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA2367D22EB2E8C00AA2A22 /* RecipesViewController.swift */; };
 		DAAE9C3522732B67002BB84D /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAE9C3422732B67002BB84D /* ForgotPasswordViewController.swift */; };
 		DAAFC7E0225CD6B800CDA656 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAFC7DF225CD6B800CDA656 /* AppDelegate.swift */; };
 		DAAFC7E2225CD6B800CDA656 /* FirstSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAFC7E1225CD6B800CDA656 /* FirstSettingsViewController.swift */; };
@@ -78,7 +77,6 @@
 		DA6E9D7B22BD03A1007572F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DA72172D22982A3F00C2AEF6 /* mealSchedule.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = mealSchedule.entitlements; sourceTree = "<group>"; };
 		DA97A6B3226C9C6C00F0DC9A /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
-		DAA2367D22EB2E8C00AA2A22 /* RecipesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesViewController.swift; sourceTree = "<group>"; };
 		DAAE9C3422732B67002BB84D /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		DAAFC7DC225CD6B800CDA656 /* mealSchedule.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mealSchedule.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAAFC7DF225CD6B800CDA656 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -163,7 +161,6 @@
 			isa = PBXGroup;
 			children = (
 				DA97A6B3226C9C6C00F0DC9A /* MainViewController.swift */,
-				DAA2367D22EB2E8C00AA2A22 /* RecipesViewController.swift */,
 				DAAFC7E1225CD6B800CDA656 /* FirstSettingsViewController.swift */,
 				DA61B83A226F500D006703C2 /* AuthorViewController.swift */,
 				DAAE9C3422732B67002BB84D /* ForgotPasswordViewController.swift */,
@@ -439,7 +436,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				DAE55B14226B237C00BF0F3D /* Model.swift in Sources */,
-				DAA2367E22EB2E8C00AA2A22 /* RecipesViewController.swift in Sources */,
 				DAAE9C3522732B67002BB84D /* ForgotPasswordViewController.swift in Sources */,
 				DAAFC7E2225CD6B800CDA656 /* FirstSettingsViewController.swift in Sources */,
 				DAAFC7E0225CD6B800CDA656 /* AppDelegate.swift in Sources */,
