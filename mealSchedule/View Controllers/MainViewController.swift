@@ -46,31 +46,6 @@ class MainViewController: UIViewController {
     }
 }
 
-/*
- 
- 
- fweferbfe]wergsrt
- hrd
-  e\rh
- erth
- etrh
- et
- hety
- h
- etyh
- etyh
- ety
- hety
- hety
- hety
- htye
- h
- tyeh
- teyh
- yt
- 
- */
-
 //MARK: Status bar item color
 
 func uicolorFromHex(rgbValue:UInt32)->UIColor{
