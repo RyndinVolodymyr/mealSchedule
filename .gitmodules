@@ -1,0 +1,3 @@
+[submodule "JsonRPC"]
+	path = JsonRPC
+	url = https://github.com/tinrobots/JsonRPC.git

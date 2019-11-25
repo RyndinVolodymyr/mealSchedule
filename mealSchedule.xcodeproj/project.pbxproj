@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -18,6 +18,12 @@
 		DA6E9D7A22BD03A1007572F9 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA6E9D7822BD03A1007572F9 /* MainInterface.storyboard */; };
 		DA6E9D7E22BD03A1007572F9 /* Content.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = DA6E9D7022BD03A1007572F9 /* Content.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		DA97A6B4226C9C6C00F0DC9A /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA97A6B3226C9C6C00F0DC9A /* MainViewController.swift */; };
+		DA97C9BB22EF46210012B8A2 /* SnapShotExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA97C9BA22EF46210012B8A2 /* SnapShotExtensions.swift */; };
+		DA97C9C322EF47540012B8A2 /* ImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA97C9C222EF47540012B8A2 /* ImageTableViewCell.swift */; };
+		DAAE72E622ECA48F00910096 /* RecipeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAE72E522ECA48F00910096 /* RecipeTableViewController.swift */; };
+		DAAE72ED22ECB1B100910096 /* RecipeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAE72EC22ECB1B100910096 /* RecipeDetailViewController.swift */; };
+		DAAE72EF22ECB65400910096 /* RecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAE72EE22ECB65400910096 /* RecipeViewController.swift */; };
+		DAAE72F122ECB6B100910096 /* MenuCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAE72F022ECB6B100910096 /* MenuCollectionViewCell.swift */; };
 		DAAE9C3522732B67002BB84D /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAE9C3422732B67002BB84D /* ForgotPasswordViewController.swift */; };
 		DAAFC7E0225CD6B800CDA656 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAFC7DF225CD6B800CDA656 /* AppDelegate.swift */; };
 		DAAFC7E2225CD6B800CDA656 /* FirstSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAFC7E1225CD6B800CDA656 /* FirstSettingsViewController.swift */; };
@@ -77,6 +83,12 @@
 		DA6E9D7B22BD03A1007572F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DA72172D22982A3F00C2AEF6 /* mealSchedule.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = mealSchedule.entitlements; sourceTree = "<group>"; };
 		DA97A6B3226C9C6C00F0DC9A /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		DA97C9BA22EF46210012B8A2 /* SnapShotExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapShotExtensions.swift; sourceTree = "<group>"; };
+		DA97C9C222EF47540012B8A2 /* ImageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageTableViewCell.swift; sourceTree = "<group>"; };
+		DAAE72E522ECA48F00910096 /* RecipeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeTableViewController.swift; sourceTree = "<group>"; };
+		DAAE72EC22ECB1B100910096 /* RecipeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailViewController.swift; sourceTree = "<group>"; };
+		DAAE72EE22ECB65400910096 /* RecipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeViewController.swift; sourceTree = "<group>"; };
+		DAAE72F022ECB6B100910096 /* MenuCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCollectionViewCell.swift; sourceTree = "<group>"; };
 		DAAE9C3422732B67002BB84D /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		DAAFC7DC225CD6B800CDA656 /* mealSchedule.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mealSchedule.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAAFC7DF225CD6B800CDA656 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -165,6 +177,10 @@
 				DA61B83A226F500D006703C2 /* AuthorViewController.swift */,
 				DAAE9C3422732B67002BB84D /* ForgotPasswordViewController.swift */,
 				DAC50BC1226DBA1F00291A7F /* ThirdSettingViewController.swift */,
+				DAAE72E522ECA48F00910096 /* RecipeTableViewController.swift */,
+				DAAE72EC22ECB1B100910096 /* RecipeDetailViewController.swift */,
+				DAAE72EE22ECB65400910096 /* RecipeViewController.swift */,
+				DAAE72EB22ECA50400910096 /* View */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -174,8 +190,19 @@
 			children = (
 				DAE55B13226B237C00BF0F3D /* Model.swift */,
 				DA6E9D5A22BD0228007572F9 /* SampleNotificationDelegate.swift */,
+				DA97C9BA22EF46210012B8A2 /* SnapShotExtensions.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		DAAE72EB22ECA50400910096 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DAAE72F022ECB6B100910096 /* MenuCollectionViewCell.swift */,
+				DA97C9C222EF47540012B8A2 /* ImageTableViewCell.swift */,
+				DAAFC7E3225CD6B800CDA656 /* Main.storyboard */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		DAAFC7D3225CD6B800CDA656 = {
@@ -207,7 +234,6 @@
 				DAAFC7DF225CD6B800CDA656 /* AppDelegate.swift */,
 				DA97A6B5226CA06D00F0DC9A /* View Controllers */,
 				DAA2367C22EB2E3700AA2A22 /* Model */,
-				DAAFC7E3225CD6B800CDA656 /* Main.storyboard */,
 				DAAFC7E6225CD6BA00CDA656 /* Assets.xcassets */,
 				DAAFC7E8225CD6BA00CDA656 /* LaunchScreen.storyboard */,
 				DAAFC7EB225CD6BA00CDA656 /* Info.plist */,
@@ -261,8 +287,8 @@
 				DAAFC7D8225CD6B800CDA656 /* Sources */,
 				DAAFC7D9225CD6B800CDA656 /* Frameworks */,
 				DAAFC7DA225CD6B800CDA656 /* Resources */,
-				BC2D0B0EB987EDF34BE8FFB5 /* [CP] Embed Pods Frameworks */,
 				DA6E9D6B22BD0390007572F9 /* Embed App Extensions */,
+				D75BB2CB9D847B414F82A9F5 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -376,36 +402,17 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		BC2D0B0EB987EDF34BE8FFB5 /* [CP] Embed Pods Frameworks */ = {
+		D75BB2CB9D847B414F82A9F5 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-mealSchedule/Pods-mealSchedule-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
-				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
-				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
-				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
-				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
-				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
-				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
-				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-mealSchedule/Pods-mealSchedule-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-mealSchedule/Pods-mealSchedule-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -435,12 +442,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DAAE72E622ECA48F00910096 /* RecipeTableViewController.swift in Sources */,
 				DAE55B14226B237C00BF0F3D /* Model.swift in Sources */,
 				DAAE9C3522732B67002BB84D /* ForgotPasswordViewController.swift in Sources */,
 				DAAFC7E2225CD6B800CDA656 /* FirstSettingsViewController.swift in Sources */,
+				DAAE72F122ECB6B100910096 /* MenuCollectionViewCell.swift in Sources */,
 				DAAFC7E0225CD6B800CDA656 /* AppDelegate.swift in Sources */,
 				DA61B83B226F500D006703C2 /* AuthorViewController.swift in Sources */,
 				DAC50BC2226DBA1F00291A7F /* ThirdSettingViewController.swift in Sources */,
+				DAAE72ED22ECB1B100910096 /* RecipeDetailViewController.swift in Sources */,
+				DAAE72EF22ECB65400910096 /* RecipeViewController.swift in Sources */,
+				DA97C9BB22EF46210012B8A2 /* SnapShotExtensions.swift in Sources */,
+				DA97C9C322EF47540012B8A2 /* ImageTableViewCell.swift in Sources */,
 				DA6E9D5B22BD0228007572F9 /* SampleNotificationDelegate.swift in Sources */,
 				DA97A6B4226C9C6C00F0DC9A /* MainViewController.swift in Sources */,
 			);
@@ -616,7 +629,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -671,7 +684,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

@@ -34,10 +34,10 @@ class AuthorViewController: UIViewController {
     }
     
     //MARK: Creating FB standart button
-    let facebookButton: FBSDKLoginButton = {
-        let buttonFb = FBSDKLoginButton()
+    let facebookButton: FBLoginButton = {
+        let buttonFb = FBLoginButton()
         buttonFb.translatesAutoresizingMaskIntoConstraints = false
-        buttonFb.readPermissions = ["email", "public_profile"]
+        buttonFb.permissions  = ["email", "public_profile"]
         return buttonFb
     }()
     
@@ -51,7 +51,6 @@ class AuthorViewController: UIViewController {
         
         view.addSubview(facebookButton)
         setupLayout()
-    
     }
     
     @IBAction func enterButton(_ sender: UIButton) {
@@ -108,16 +107,16 @@ extension AuthorViewController: UITextFieldDelegate {
 }
 //MARK: Facebook author button extensions
 
-extension AuthorViewController: FBSDKLoginButtonDelegate {
-    func loginButton(_ loginButton: FBSDKLoginButton!, didCompleteWith result: FBSDKLoginManagerLoginResult!, error: Error!) {
-        if result.isCancelled {
+extension AuthorViewController: LoginButtonDelegate {
+    func loginButton(_ loginButton: FBLoginButton, didCompleteWith result: LoginManagerLoginResult?, error: Error?) {
+        if result!.isCancelled {
             print("Is Cancelled")
         } else {
             if error == nil {
-                FBSDKGraphRequest(graphPath: "me", parameters: ["friends": "email, name"], tokenString: FBSDKAccessToken.current()?.tokenString, version: nil, httpMethod: "GET")?.start(completionHandler: { (nil, result, error) in
+                GraphRequest(graphPath: "me", parameters: ["friends": "email, name"], tokenString: AccessToken.current?.tokenString, version: nil, httpMethod: HTTPMethod(rawValue: "GET")).start(completionHandler: { (nil, result, error) in
                     if error == nil {
                         print("Facebook result: \(result ?? "Facebook error")")
-                        let credential = FacebookAuthProvider.credential(withAccessToken: FBSDKAccessToken.current().tokenString)
+                        let credential = FacebookAuthProvider.credential(withAccessToken: AccessToken.current!.tokenString)
                         Auth.auth().signInAndRetrieveData(with: credential, completion: { (result, error) in
                             if error == nil {
                                 print(result?.user.uid ?? "Facebook error to get user id")
@@ -132,7 +131,7 @@ extension AuthorViewController: FBSDKLoginButtonDelegate {
         }
     }
 
-    func loginButtonDidLogOut(_ loginButton: FBSDKLoginButton!) {
+    func loginButtonDidLogOut(_ loginButton: FBLoginButton) {
         print("LogOUT")
     }
 }

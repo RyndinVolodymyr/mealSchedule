@@ -21,7 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, MessagingDelegate {
     
     @available(iOS 9.0, *)
     func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
-        FBSDKApplicationDelegate.sharedInstance()?.application(app, open: url, options: options)
+        ApplicationDelegate.shared.application(app, open: url, options: options)
         return true
     }
     
@@ -50,7 +50,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, MessagingDelegate {
         
         application.registerForRemoteNotifications()
         
-        FBSDKApplicationDelegate.sharedInstance()?.application(application, didFinishLaunchingWithOptions: launchOptions)
+        ApplicationDelegate.shared.application(application, didFinishLaunchingWithOptions: launchOptions)
         Auth.auth().addStateDidChangeListener { (auth, user) in
             if user == nil {
                 self.showModalAuth()

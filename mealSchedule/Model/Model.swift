@@ -12,10 +12,43 @@ import FirebaseStorage
 import FirebaseMessaging
 import FirebaseAuth
 
-//MARK: Recipe arrays
 
-//let recipeNameArray = ["Похудение", "Норма", "Набор массы"]
-//let recipeImageArray = [UIImage(named: "dieta"), UIImage(named: "norma"), UIImage(named: "nabor")]
+
+//MARK: Deference between UTC and user Time Zone in minutes
+var minutesFromUTC: Int { return TimeZone.current.secondsFromGMT() / 60 }
+
+//MARK: func shedule
+
+func shedule() {
+    guard let count = userDefaults.object(forKey: Token.quantFoodPicker.rawValue) as? Int
+    else { return }
+    
+    guard  let sleeping = userDefaults.object(forKey: Token.sleepPicker.rawValue) as? Int
+    else { return }
+    
+    guard let morning = userDefaults.object(forKey: Token.weakUpPicker.rawValue) as? Int
+    else { return }
+//
+//    guard let sleepMinute = userDefaults.object(forKey: Token.sleepPickerMinutes.rawValue) as? Int
+//    else { return }
+//
+//    guard let morningMinutes = userDefaults.object(forKey: Token.weakUpPickerMinutes.rawValue) as? Int
+//    else { return }
+                        
+    let sleepingNormalized = sleeping + 18
+    let sleepingFullMins = (sleepingNormalized > 23 ? 23 : sleepingNormalized) * 60
+    let morningFullMins = ((morning + 4) * 60)
+    
+    let step = (sleepingFullMins - morningFullMins)/count
+                
+    var arrayDishes = [Int]()
+    for i in 0...count {
+            arrayDishes.append(morningFullMins + step * i)
+    }
+    print("array of dishes \(arrayDishes)")
+    
+}
+
 
 //MARK: Creating reference for Firebase
 let recipeCellIdentif = "recipeCellIdentif"
@@ -38,9 +71,9 @@ func showHiddenButtons(but: UIButton, swt: UISwitch) {
 
 //MARK: Creating arrays
 
-let arrayEating = ["2", "3", "4", "5", "6", "7"]
-let arrayWeakUp = ["06", "07", "08", "09", "10", "11", "12"]
-let arraySleep = ["20", "21", "22", "23", "24", "01", "02", "03"]
+let arrayEating = ["1", "2", "3", "4", "5", "6", "7"]
+let arrayWeakUp = [["04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14"], ["00", "05", "10", "15", "20", "25", "30", "35", "40", "45", "50", "55"]]
+let arraySleep = [["18", "19", "20", "21", "22", "23", "00", "01", "02", "03"], ["00", "05", "10", "15", "20", "25", "30", "35", "40", "45", "50", "55"]]
 
 var dicChek = [String : Any]()
 
@@ -57,15 +90,38 @@ enum Token: String {
     case weakUpPicker
     case sleepPicker
     case destinyChooseSegment
+    case weakUpPickerMinutes
+    case sleepPickerMinutes
 }
 
 //MARK: NSDate
 
 let date = NSDate()
 
-//MARK: retrive data from firebase
 
+//MARK: identifiers of seguae
 
-//MARK: Calculation parametrs
+let menuCell = "MenuCell"
 
+//MARK: Model of Recipes
 
+protocol DocumentSerializable {
+    init?(dictionary:[String: Any])
+}
+
+struct Menu: Decodable {
+    var imageURL: String?
+    var name: String?
+    var cook: String
+    var cal: String?
+}
+
+extension Menu: DocumentSerializable {
+    init?(dictionary: [String : Any]) {
+        guard let name = dictionary["name"] as? String,
+            let cook = dictionary["cook"] as? String,
+            let imageURL = dictionary["imageURL"] as? String,
+            let cal = dictionary["cal"] as? String else { return nil }
+        self.init(imageURL: imageURL, name: name, cook: cook, cal: cal)
+    }
+}
