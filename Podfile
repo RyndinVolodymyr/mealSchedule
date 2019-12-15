@@ -16,7 +16,6 @@
    pod 'Kingfisher'
    pod 'Firebase/Firestore'
    
-   
    # Pods for mealSchedule
 
  end
