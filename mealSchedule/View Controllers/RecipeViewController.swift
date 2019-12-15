@@ -33,7 +33,6 @@ class RecipeViewController: UIViewController {
         collectionView.dataSource = self
         
         loadData()
-
     }
     
     func loadData() {

@@ -18,6 +18,7 @@ import FirebaseAuth
 var minutesFromUTC: Int { return TimeZone.current.secondsFromGMT() / 60 }
 
 //MARK: func shedule
+var arrayDishes = [Int]()
 
 func shedule() {
     guard let count = userDefaults.object(forKey: Token.quantFoodPicker.rawValue) as? Int
@@ -41,18 +42,19 @@ func shedule() {
     
     let step = (sleepingFullMins - morningFullMins)/count
                 
-    var arrayDishes = [Int]()
+    
     for i in 0...count {
             arrayDishes.append(morningFullMins + step * i)
     }
     print("array of dishes \(arrayDishes)")
+    
     
 }
 
 
 //MARK: Creating reference for Firebase
 let recipeCellIdentif = "recipeCellIdentif"
-let token: [String: AnyObject] = [Messaging.messaging().fcmToken!: Messaging.messaging().fcmToken as AnyObject]
+let token: String = Messaging.messaging().fcmToken ?? "No token Error"
 let nameInfo = Auth.auth().currentUser?.displayName
 let key = Auth.auth().currentUser?.uid
 let ref = Database.database().reference()

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		D09FCECC20FE20E434201FD1 /* Pods_mealSchedule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C27DDC223E20E4E1DB89B5AB /* Pods_mealSchedule.framework */; };
+		DA5262EC23A6546D00FC10EB /* JsonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5262EB23A6546D00FC10EB /* JsonModel.swift */; };
 		DA61B83B226F500D006703C2 /* AuthorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA61B83A226F500D006703C2 /* AuthorViewController.swift */; };
 		DA6E9D5B22BD0228007572F9 /* SampleNotificationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6E9D5A22BD0228007572F9 /* SampleNotificationDelegate.swift */; };
 		DA6E9D6322BD0390007572F9 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6E9D6222BD0390007572F9 /* NotificationService.swift */; };
@@ -70,6 +71,7 @@
 /* Begin PBXFileReference section */
 		0209E6E0940FB91B5D2BF7A2 /* Pods-mealSchedule.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mealSchedule.debug.xcconfig"; path = "Target Support Files/Pods-mealSchedule/Pods-mealSchedule.debug.xcconfig"; sourceTree = "<group>"; };
 		C27DDC223E20E4E1DB89B5AB /* Pods_mealSchedule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_mealSchedule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA5262EB23A6546D00FC10EB /* JsonModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonModel.swift; sourceTree = "<group>"; };
 		DA61B83A226F500D006703C2 /* AuthorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorViewController.swift; sourceTree = "<group>"; };
 		DA6E9D5A22BD0228007572F9 /* SampleNotificationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleNotificationDelegate.swift; sourceTree = "<group>"; };
 		DA6E9D6022BD0390007572F9 /* Service.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Service.appex; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -180,7 +182,6 @@
 				DAAE72E522ECA48F00910096 /* RecipeTableViewController.swift */,
 				DAAE72EC22ECB1B100910096 /* RecipeDetailViewController.swift */,
 				DAAE72EE22ECB65400910096 /* RecipeViewController.swift */,
-				DAAE72EB22ECA50400910096 /* View */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -191,6 +192,7 @@
 				DAE55B13226B237C00BF0F3D /* Model.swift */,
 				DA6E9D5A22BD0228007572F9 /* SampleNotificationDelegate.swift */,
 				DA97C9BA22EF46210012B8A2 /* SnapShotExtensions.swift */,
+				DA5262EB23A6546D00FC10EB /* JsonModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -232,6 +234,7 @@
 			children = (
 				DA72172D22982A3F00C2AEF6 /* mealSchedule.entitlements */,
 				DAAFC7DF225CD6B800CDA656 /* AppDelegate.swift */,
+				DAAE72EB22ECA50400910096 /* View */,
 				DA97A6B5226CA06D00F0DC9A /* View Controllers */,
 				DAA2367C22EB2E3700AA2A22 /* Model */,
 				DAAFC7E6225CD6BA00CDA656 /* Assets.xcassets */,
@@ -442,6 +445,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA5262EC23A6546D00FC10EB /* JsonModel.swift in Sources */,
 				DAAE72E622ECA48F00910096 /* RecipeTableViewController.swift in Sources */,
 				DAE55B14226B237C00BF0F3D /* Model.swift in Sources */,
 				DAAE9C3522732B67002BB84D /* ForgotPasswordViewController.swift in Sources */,
