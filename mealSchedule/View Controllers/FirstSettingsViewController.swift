@@ -53,9 +53,6 @@ class FirstSettingsViewController: UIViewController {
         userDefaults.synchronize()
         
         print("MINUTES BETween \(minutesFromUTC)")
-        print("Token \(token)")
-        print("Key \(key)")
-        print(fileJsontoPost)
       
         self.foodCookSwitch.addTarget(self, action:#selector(switchShowButtonFood(param:)), for: .valueChanged)
         self.trainingSwitch.addTarget(self, action: #selector(switchShowButtonTrain(param:)), for: .valueChanged)
@@ -81,13 +78,12 @@ class FirstSettingsViewController: UIViewController {
         pikerSettings()
         
         //MARK: Json Post settings
-        
-        var fileJsontoPost = ["goal": destinyChooseSegment.selectedSegmentIndex, "schedule": arrayDishes, "fcmToken": token, "timeZoneOffset": minutesFromUTC, "active": true ] as [String : Any]
-        
         //MARK: Sending data to firebase
         
         let dataUP = ["id": key ?? "AutoId", "foodCookSwitch": foodCookSwitch.isOn, "trainingSwitch": trainingSwitch.isOn, "destinyChooseSegment": destinyChooseSegment.selectedSegmentIndex, "quantFoodPicker": quantFoodPicker.selectedRow(inComponent: 0), "weakUpPicker": weakUpPicker.selectedRow(inComponent: 0), "sleepPicker": sleepPicker.selectedRow(inComponent: 0), "FCMToken": token] as [String : Any]
         ref.child("users").child(key!).updateChildValues(dataUP)
+        jsonPost()
+        
     }
 }
 
