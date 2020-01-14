@@ -77,16 +77,21 @@ class FirstSettingsViewController: UIViewController {
         shedule()
         pikerSettings()
         
-        //MARK: Json Post settings
         //MARK: Sending data to firebase
         
         let dataUP = ["id": key ?? "AutoId", "foodCookSwitch": foodCookSwitch.isOn, "trainingSwitch": trainingSwitch.isOn, "destinyChooseSegment": destinyChooseSegment.selectedSegmentIndex, "quantFoodPicker": quantFoodPicker.selectedRow(inComponent: 0), "weakUpPicker": weakUpPicker.selectedRow(inComponent: 0), "sleepPicker": sleepPicker.selectedRow(inComponent: 0), "FCMToken": token] as [String : Any]
         ref.child("users").child(key!).updateChildValues(dataUP)
         jsonPost()
         
+        //Making alert save button
+        
+        let alert = UIAlertController(title: "Сохранено", message: "Ваши параметры отправлены на сервер", preferredStyle: .alert)
+        let okBut = UIAlertAction(title: "OK", style: .default, handler: nil)
+        
+        alert.addAction(okBut)
+        present(alert, animated: true, completion: nil)
     }
 }
-
 
 //MARK: Picker View Extensions
 extension FirstSettingsViewController: UIPickerViewDelegate, UIPickerViewDataSource {

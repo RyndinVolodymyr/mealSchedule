@@ -38,33 +38,27 @@ func shedule() {
     let sleepingFullMins = ((sleepingNormalized > 23 ? 23 : sleepingNormalized) * 60) + (sleepMinute * 5)
     let morningFullMins = ((morning + 4) * 60) + (morningMinutes * 5)
     
-//    print("sleeping \(sleeping)")
-//    print("morning \(morning)")
-//    print("sleeping minute \(sleepMinute)")
-//    print("morning minute \(morningMinutes)")
-//    print("sleeping normalized \(sleepingNormalized)")
-//    print("sleeping full minutes \(sleepingFullMins)")
-//    print("morning full minutes \(morningFullMins)")
+    print("sleeping \(sleeping)")
+    print("morning \(morning)")
+    print("sleeping minute \(sleepMinute)")
+    print("morning minute \(morningMinutes)")
+    print("sleeping normalized \(sleepingNormalized)")
+    print("sleeping full minutes \(sleepingFullMins)")
+    print("morning full minutes \(morningFullMins)")
+    print("count \(count)")
     
     let step = (sleepingFullMins - morningFullMins)/(count + 1)
+    
     arrayDishes.removeAll()
     for i in 0...count {
         arrayDishes.append(morningFullMins + step * i)
     }
-    print("array of dishes \(arrayDishes)")
-    var postGoal: String?
-    let goal = userDefaults.integer(forKey: Token.destinyChooseSegment.rawValue)
-    switch goal {
-    case 0: postGoal = "weightLoss"
-    case 1: postGoal = "norm"
-    case 2: postGoal = "weightGain"
-    default: print("Default")
-    }
+    //morning breakfast +30 min after wekeup
     
-    let fileJsontoPost = ["goal": postGoal ?? "norm", "schedule": arrayDishes, "fcmToken": token, "timeZoneOffset": minutesFromUTC, "active": true, "count": arrayDishes.capacity] as [String : Any]
-    for (x, y) in fileJsontoPost {
-        print("\(x) \(y)")
-    }
+    arrayDishes.insert(arrayDishes.first! + 30, at: 1)
+    arrayDishes.remove(at: 0)
+    print("array of dishes \(arrayDishes)")
+    
 }
 
 //MARK: Creating reference for Firebase

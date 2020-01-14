@@ -16,11 +16,9 @@ class RecipeViewController: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
     
-
     var menuArray = [Menu]()
     
     var db: Firestore!
-
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -62,7 +60,6 @@ extension RecipeViewController: UICollectionViewDelegate, UICollectionViewDataSo
                 cell.menu = menuArray[indexPath.row]
                 return cell
             }
-            
         return UICollectionViewCell()
     }
 }

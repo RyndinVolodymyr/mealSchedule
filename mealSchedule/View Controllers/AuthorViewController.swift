@@ -117,7 +117,7 @@ extension AuthorViewController: LoginButtonDelegate {
                     if error == nil {
                         print("Facebook result: \(result ?? "Facebook error")")
                         let credential = FacebookAuthProvider.credential(withAccessToken: AccessToken.current!.tokenString)
-                        Auth.auth().signInAndRetrieveData(with: credential, completion: { (result, error) in
+                        Auth.auth().signIn(with: credential, completion: { (result, error) in
                             if error == nil {
                                 print(result?.user.uid ?? "Facebook error to get user id")
                                 self.dismiss(animated: true, completion: nil)

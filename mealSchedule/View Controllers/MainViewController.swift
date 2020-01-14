@@ -39,9 +39,9 @@ class MainViewController: UIViewController {
     
     func showInfoLabelText() {
         if nameInfo == nil || nameInfo!.isEmpty {
-            infoLabel.text = "Hello Friend, Welcome to Meal Shhedule! Your settings status is "
+            infoLabel.text = "Hello Friend, Welcome to Meal Schedule! Your settings status is "
         } else {
-            infoLabel.text = "Hello \(nameInfo ?? "Unknown Name"), Welcome to Meal Shhedule! Your settings status is "
+            infoLabel.text = "Hello \(nameInfo ?? "Unknown Name"), Welcome to Meal Schedule! Your settings status is "
         }
     }
 }
