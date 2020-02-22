@@ -55,11 +55,11 @@ extension RecipeViewController: UICollectionViewDelegate, UICollectionViewDataSo
         return menuArray.count
     }
     
-        func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-            if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: menuCell, for: indexPath) as? MenuCollectionViewCell {
-                cell.menu = menuArray[indexPath.row]
-                return cell
-            }
-        return UICollectionViewCell()
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: menuCell, for: indexPath) as? MenuCollectionViewCell {
+            cell.menu = menuArray[indexPath.row]
+            return cell
+        }
+    return UICollectionViewCell()
     }
 }

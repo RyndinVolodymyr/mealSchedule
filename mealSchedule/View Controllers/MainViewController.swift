@@ -19,6 +19,10 @@ class MainViewController: UIViewController {
     @IBOutlet weak var sportSettingsButton: UIButton!
     @IBOutlet weak var infoLabel: UILabel!
     
+    override func viewWillAppear(_ animated: Bool) {
+        showInfoLabelText()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -38,10 +42,15 @@ class MainViewController: UIViewController {
     }
     
     func showInfoLabelText() {
+        let userDefaults = UserDefaults.standard
+        userDefaults.synchronize()
+        guard let bmrUD = userDefaults.object(forKey: Token.bmrToken.rawValue) as? Int
+            else { return }
+        print("\(bmrUD) BMR USER Defaults!!!!!")
         if nameInfo == nil || nameInfo!.isEmpty {
-            infoLabel.text = "Hello Friend, Welcome to Meal Schedule! Your settings status is "
+            infoLabel.text = "Hello Friend, Welcome to Meal Schedule! Your settings status is/n your callory for one day is  "
         } else {
-            infoLabel.text = "Hello \(nameInfo ?? "Unknown Name"), Welcome to Meal Schedule! Your settings status is "
+            infoLabel.text = "Hello \(nameInfo ?? "Unknown Name"), Welcome to Meal Schedule! Your settings status is/n your callory for one day is  "
         }
     }
 }

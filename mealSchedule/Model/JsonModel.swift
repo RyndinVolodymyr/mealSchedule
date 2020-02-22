@@ -33,7 +33,11 @@ func jsonPost() {
             case 2: postGoal = "weightGain"
             default: print("Default")
         }
-        let json: [String: Any] = ["goal": postGoal!, "schedule": arrayDishes, "fcmToken": token, "timeZoneOffset": minutesFromUTC, "active": true ]
+        guard let bmr = userDefaults.object(forKey: Token.bmrToken.rawValue) as? Int
+            else { return }
+        
+        
+        let json: [String: Any] = ["goal": postGoal!, "schedule": arrayDishes, "fcmToken": token, "timeZoneOffset": minutesFromUTC, "active": true, "calories": bmr ]
         
         let jsonData = try? JSONSerialization.data(withJSONObject: json)
 

@@ -51,6 +51,11 @@ class AuthorViewController: UIViewController {
         
         view.addSubview(facebookButton)
         setupLayout()
+        
+        registranionLabel.layer.cornerRadius = 10.0
+        nameLabel.layer.cornerRadius = 10.0
+        emaillabel.layer.cornerRadius = 10.0
+        passwordLabel.layer.cornerRadius = 10.0
     }
     
     @IBAction func enterButton(_ sender: UIButton) {

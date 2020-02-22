@@ -20,19 +20,19 @@ var arrayDishes = [Int]()
 
 func shedule() {
     guard let count = userDefaults.object(forKey: Token.quantFoodPicker.rawValue) as? Int
-    else { return }
+        else { return }
     
     guard  let sleeping = userDefaults.object(forKey: Token.sleepPicker.rawValue) as? Int
-    else { return }
+        else { return }
     
     guard let morning = userDefaults.object(forKey: Token.weakUpPicker.rawValue) as? Int
-    else { return }
+        else { return }
 
     guard let sleepMinute = userDefaults.object(forKey: Token.sleepPickerMinutes.rawValue) as? Int
-    else { return }
+        else { return }
 
     guard let morningMinutes = userDefaults.object(forKey: Token.weakUpPickerMinutes.rawValue) as? Int
-    else { return }
+        else { return }
     
     let sleepingNormalized = sleeping + 18
     let sleepingFullMins = ((sleepingNormalized > 23 ? 23 : sleepingNormalized) * 60) + (sleepMinute * 5)
@@ -103,6 +103,13 @@ enum Token: String {
     case destinyChooseSegment
     case weakUpPickerMinutes
     case sleepPickerMinutes
+    case ageTextField
+    case heightTextField
+    case weightTextField
+    case trainingSegment
+    case sexSegment
+    case resultLabel
+    case bmrToken
 }
 
 //MARK: NSDate

@@ -18,6 +18,7 @@
 		DA6E9D7722BD03A1007572F9 /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6E9D7622BD03A1007572F9 /* NotificationViewController.swift */; };
 		DA6E9D7A22BD03A1007572F9 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA6E9D7822BD03A1007572F9 /* MainInterface.storyboard */; };
 		DA6E9D7E22BD03A1007572F9 /* Content.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = DA6E9D7022BD03A1007572F9 /* Content.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		DA82775C23D2105500CE2A0C /* BMRViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA82775B23D2105500CE2A0C /* BMRViewController.swift */; };
 		DA97A6B4226C9C6C00F0DC9A /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA97A6B3226C9C6C00F0DC9A /* MainViewController.swift */; };
 		DA97C9BB22EF46210012B8A2 /* SnapShotExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA97C9BA22EF46210012B8A2 /* SnapShotExtensions.swift */; };
 		DA97C9C322EF47540012B8A2 /* ImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA97C9C222EF47540012B8A2 /* ImageTableViewCell.swift */; };
@@ -84,6 +85,7 @@
 		DA6E9D7922BD03A1007572F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		DA6E9D7B22BD03A1007572F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DA72172D22982A3F00C2AEF6 /* mealSchedule.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = mealSchedule.entitlements; sourceTree = "<group>"; };
+		DA82775B23D2105500CE2A0C /* BMRViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BMRViewController.swift; sourceTree = "<group>"; };
 		DA97A6B3226C9C6C00F0DC9A /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		DA97C9BA22EF46210012B8A2 /* SnapShotExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapShotExtensions.swift; sourceTree = "<group>"; };
 		DA97C9C222EF47540012B8A2 /* ImageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageTableViewCell.swift; sourceTree = "<group>"; };
@@ -182,6 +184,7 @@
 				DAAE72E522ECA48F00910096 /* RecipeTableViewController.swift */,
 				DAAE72EC22ECB1B100910096 /* RecipeDetailViewController.swift */,
 				DAAE72EE22ECB65400910096 /* RecipeViewController.swift */,
+				DA82775B23D2105500CE2A0C /* BMRViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -447,6 +450,7 @@
 			files = (
 				DA5262EC23A6546D00FC10EB /* JsonModel.swift in Sources */,
 				DAAE72E622ECA48F00910096 /* RecipeTableViewController.swift in Sources */,
+				DA82775C23D2105500CE2A0C /* BMRViewController.swift in Sources */,
 				DAE55B14226B237C00BF0F3D /* Model.swift in Sources */,
 				DAAE9C3522732B67002BB84D /* ForgotPasswordViewController.swift in Sources */,
 				DAAFC7E2225CD6B800CDA656 /* FirstSettingsViewController.swift in Sources */,
