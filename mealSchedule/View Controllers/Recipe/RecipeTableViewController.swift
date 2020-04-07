@@ -15,21 +15,20 @@ class RecipeTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.tableView.register(ImageViewCell.self, forCellReuseIdentifier: "ImageViewCell")
+        self.tableView.register(ImageViewCell.self, forCellReuseIdentifier: imageViewCell)
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        performSegue(withIdentifier: "showDetailVC", sender: self)
+        performSegue(withIdentifier: showDetailVC, sender: self)
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
         return recipeImageArray.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ImageViewCell") as! ImageViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: imageViewCell) as! ImageViewCell
         cell.mainImageView.image = recipeImageArray[indexPath.row]
         cell.mainLabel.text = recipeNameArray[indexPath.row]
         return cell

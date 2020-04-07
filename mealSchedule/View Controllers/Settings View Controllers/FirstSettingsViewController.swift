@@ -37,7 +37,6 @@ class FirstSettingsViewController: UIViewController {
         showHiddenButtons(but: coockingButtonHide, swt: foodCookSwitch)
         showHiddenButtons(but: trainingButtonHide, swt: trainingSwitch)
     }
-   
     override func viewDidLoad() {
         super.viewDidLoad()
         

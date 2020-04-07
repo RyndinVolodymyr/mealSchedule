@@ -91,7 +91,8 @@ class BMRViewController: UIViewController {
             resultLabel.text = "Вы дожны употреблять \(Int(bmr)) килокалорий для поддержания веса.\nИндекс массы тела \(Int(bmi)).\nОжирение третьей степени"
         default: print("error")
         }
-        userDefaults.set(bmr, forKey: Token.bmrToken.rawValue)
+        userDefaults.set(Int(bmr), forKey: Token.bmrToken.rawValue)
+        userDefaults.set(Int(bmi), forKey: Token.bmiToken.rawValue)
     }
 //MARK: User Defaults Read Settings
     

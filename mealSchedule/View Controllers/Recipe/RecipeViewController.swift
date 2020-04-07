@@ -62,4 +62,15 @@ extension RecipeViewController: UICollectionViewDelegate, UICollectionViewDataSo
         }
     return UICollectionViewCell()
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+
+        func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//            if segue.identifier == detailSegue {
+                let nextScene = segue.destination as! RecipeDetailViewController
+                let menuDet = menuArray[indexPath.row]
+                nextScene.menu = menuDet
+            
+        }
+    }
 }

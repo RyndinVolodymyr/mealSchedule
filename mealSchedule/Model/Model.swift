@@ -12,7 +12,7 @@ import FirebaseStorage
 import FirebaseMessaging
 import FirebaseAuth
 
-//MARK: Deference between UTC and user Time Zone in minutes
+//MARK: Difference between UTC and user Time Zone in minutes
 var minutesFromUTC: Int { return TimeZone.current.secondsFromGMT() / 60 }
 
 //MARK: func shedule
@@ -110,6 +110,7 @@ enum Token: String {
     case sexSegment
     case resultLabel
     case bmrToken
+    case bmiToken
 }
 
 //MARK: NSDate
@@ -119,6 +120,10 @@ let date = NSDate()
 //MARK: identifiers of seguae
 
 let menuCell = "MenuCell"
+let cellReuseIdentifier = "ScheduleCell"
+let imageViewCell = "ImageViewCell"
+let showDetailVC = "showDetailVC"
+let detailSegue = "detailSegue"
 
 //MARK: Model of Recipes
 

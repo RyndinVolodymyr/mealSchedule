@@ -45,5 +45,4 @@ class ImageViewCell: UITableViewCell {
         mainImageView.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
         mainImageView.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
     }
-    
 }

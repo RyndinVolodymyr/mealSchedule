@@ -8,7 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		D09FCECC20FE20E434201FD1 /* Pods_mealSchedule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C27DDC223E20E4E1DB89B5AB /* Pods_mealSchedule.framework */; };
+		DA074F5024267483009B602B /* ScheduleMyCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA074F4F24267483009B602B /* ScheduleMyCustomCell.swift */; };
 		DA5262EC23A6546D00FC10EB /* JsonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5262EB23A6546D00FC10EB /* JsonModel.swift */; };
+		DA57C32B242A790C001F78AA /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA57C32A242A790C001F78AA /* MenuTableViewCell.swift */; };
 		DA61B83B226F500D006703C2 /* AuthorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA61B83A226F500D006703C2 /* AuthorViewController.swift */; };
 		DA6E9D5B22BD0228007572F9 /* SampleNotificationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6E9D5A22BD0228007572F9 /* SampleNotificationDelegate.swift */; };
 		DA6E9D6322BD0390007572F9 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6E9D6222BD0390007572F9 /* NotificationService.swift */; };
@@ -32,7 +34,7 @@
 		DAAFC7E5225CD6B800CDA656 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAAFC7E3225CD6B800CDA656 /* Main.storyboard */; };
 		DAAFC7E7225CD6BA00CDA656 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAAFC7E6225CD6BA00CDA656 /* Assets.xcassets */; };
 		DAAFC7EA225CD6BA00CDA656 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAAFC7E8225CD6BA00CDA656 /* LaunchScreen.storyboard */; };
-		DAC50BC2226DBA1F00291A7F /* ThirdSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC50BC1226DBA1F00291A7F /* ThirdSettingViewController.swift */; };
+		DAC50BC2226DBA1F00291A7F /* ScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC50BC1226DBA1F00291A7F /* ScheduleViewController.swift */; };
 		DAD9B097226F5EEA00145E41 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DAD9B096226F5EEA00145E41 /* GoogleService-Info.plist */; };
 		DAE55B14226B237C00BF0F3D /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE55B13226B237C00BF0F3D /* Model.swift */; };
 /* End PBXBuildFile section */
@@ -72,7 +74,9 @@
 /* Begin PBXFileReference section */
 		0209E6E0940FB91B5D2BF7A2 /* Pods-mealSchedule.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mealSchedule.debug.xcconfig"; path = "Target Support Files/Pods-mealSchedule/Pods-mealSchedule.debug.xcconfig"; sourceTree = "<group>"; };
 		C27DDC223E20E4E1DB89B5AB /* Pods_mealSchedule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_mealSchedule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA074F4F24267483009B602B /* ScheduleMyCustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleMyCustomCell.swift; sourceTree = "<group>"; };
 		DA5262EB23A6546D00FC10EB /* JsonModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonModel.swift; sourceTree = "<group>"; };
+		DA57C32A242A790C001F78AA /* MenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
 		DA61B83A226F500D006703C2 /* AuthorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorViewController.swift; sourceTree = "<group>"; };
 		DA6E9D5A22BD0228007572F9 /* SampleNotificationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleNotificationDelegate.swift; sourceTree = "<group>"; };
 		DA6E9D6022BD0390007572F9 /* Service.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Service.appex; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -101,7 +105,7 @@
 		DAAFC7E6225CD6BA00CDA656 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DAAFC7E9225CD6BA00CDA656 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DAAFC7EB225CD6BA00CDA656 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DAC50BC1226DBA1F00291A7F /* ThirdSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdSettingViewController.swift; sourceTree = "<group>"; };
+		DAC50BC1226DBA1F00291A7F /* ScheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleViewController.swift; sourceTree = "<group>"; };
 		DAD9B096226F5EEA00145E41 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../GoogleService-Info.plist"; sourceTree = "<group>"; };
 		DAE55B13226B237C00BF0F3D /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		FD18B05F2C662547F18E6487 /* Pods-mealSchedule.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mealSchedule.release.xcconfig"; path = "Target Support Files/Pods-mealSchedule/Pods-mealSchedule.release.xcconfig"; sourceTree = "<group>"; };
@@ -154,6 +158,39 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		DA41CC1C2430B2BC00A3F3C7 /* Recipe */ = {
+			isa = PBXGroup;
+			children = (
+				DAAE72E522ECA48F00910096 /* RecipeTableViewController.swift */,
+				DAAE72EC22ECB1B100910096 /* RecipeDetailViewController.swift */,
+				DAAE72EE22ECB65400910096 /* RecipeViewController.swift */,
+			);
+			path = Recipe;
+			sourceTree = "<group>";
+		};
+		DA57C32C242A7F0A001F78AA /* Settings View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				DAAFC7E1225CD6B800CDA656 /* FirstSettingsViewController.swift */,
+				DA61B83A226F500D006703C2 /* AuthorViewController.swift */,
+				DAAE9C3422732B67002BB84D /* ForgotPasswordViewController.swift */,
+				DA82775B23D2105500CE2A0C /* BMRViewController.swift */,
+				DA97A6B3226C9C6C00F0DC9A /* MainViewController.swift */,
+			);
+			path = "Settings View Controllers";
+			sourceTree = "<group>";
+		};
+		DA5E1B632430A60900DD3286 /* ViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				DA074F4F24267483009B602B /* ScheduleMyCustomCell.swift */,
+				DAAE72F022ECB6B100910096 /* MenuCollectionViewCell.swift */,
+				DA57C32A242A790C001F78AA /* MenuTableViewCell.swift */,
+				DA97C9C222EF47540012B8A2 /* ImageTableViewCell.swift */,
+			);
+			path = ViewCell;
+			sourceTree = "<group>";
+		};
 		DA6E9D6122BD0390007572F9 /* Service */ = {
 			isa = PBXGroup;
 			children = (
@@ -176,15 +213,9 @@
 		DA97A6B5226CA06D00F0DC9A /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				DA97A6B3226C9C6C00F0DC9A /* MainViewController.swift */,
-				DAAFC7E1225CD6B800CDA656 /* FirstSettingsViewController.swift */,
-				DA61B83A226F500D006703C2 /* AuthorViewController.swift */,
-				DAAE9C3422732B67002BB84D /* ForgotPasswordViewController.swift */,
-				DAC50BC1226DBA1F00291A7F /* ThirdSettingViewController.swift */,
-				DAAE72E522ECA48F00910096 /* RecipeTableViewController.swift */,
-				DAAE72EC22ECB1B100910096 /* RecipeDetailViewController.swift */,
-				DAAE72EE22ECB65400910096 /* RecipeViewController.swift */,
-				DA82775B23D2105500CE2A0C /* BMRViewController.swift */,
+				DA41CC1C2430B2BC00A3F3C7 /* Recipe */,
+				DA57C32C242A7F0A001F78AA /* Settings View Controllers */,
+				DAC50BC1226DBA1F00291A7F /* ScheduleViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -203,8 +234,7 @@
 		DAAE72EB22ECA50400910096 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				DAAE72F022ECB6B100910096 /* MenuCollectionViewCell.swift */,
-				DA97C9C222EF47540012B8A2 /* ImageTableViewCell.swift */,
+				DA5E1B632430A60900DD3286 /* ViewCell */,
 				DAAFC7E3225CD6B800CDA656 /* Main.storyboard */,
 			);
 			path = View;
@@ -457,10 +487,12 @@
 				DAAE72F122ECB6B100910096 /* MenuCollectionViewCell.swift in Sources */,
 				DAAFC7E0225CD6B800CDA656 /* AppDelegate.swift in Sources */,
 				DA61B83B226F500D006703C2 /* AuthorViewController.swift in Sources */,
-				DAC50BC2226DBA1F00291A7F /* ThirdSettingViewController.swift in Sources */,
+				DAC50BC2226DBA1F00291A7F /* ScheduleViewController.swift in Sources */,
+				DA074F5024267483009B602B /* ScheduleMyCustomCell.swift in Sources */,
 				DAAE72ED22ECB1B100910096 /* RecipeDetailViewController.swift in Sources */,
 				DAAE72EF22ECB65400910096 /* RecipeViewController.swift in Sources */,
 				DA97C9BB22EF46210012B8A2 /* SnapShotExtensions.swift in Sources */,
+				DA57C32B242A790C001F78AA /* MenuTableViewCell.swift in Sources */,
 				DA97C9C322EF47540012B8A2 /* ImageTableViewCell.swift in Sources */,
 				DA6E9D5B22BD0228007572F9 /* SampleNotificationDelegate.swift in Sources */,
 				DA97A6B4226C9C6C00F0DC9A /* MainViewController.swift in Sources */,
@@ -516,6 +548,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6Z64PE7758;
 				INFOPLIST_FILE = Service/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -535,6 +568,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6Z64PE7758;
 				INFOPLIST_FILE = Service/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

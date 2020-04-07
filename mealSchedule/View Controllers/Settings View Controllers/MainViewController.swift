@@ -20,13 +20,16 @@ class MainViewController: UIViewController {
     @IBOutlet weak var infoLabel: UILabel!
     
     override func viewWillAppear(_ animated: Bool) {
-        showInfoLabelText()
+        let userDefaults = UserDefaults.standard
+        userDefaults.synchronize()
+        labelInfoText()
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        showInfoLabelText()
+        let userDefaults = UserDefaults.standard
+        userDefaults.synchronize()
+        labelInfoText()
     }
     
     @IBAction func logOutAction(_ sender: Any) {
@@ -40,17 +43,19 @@ class MainViewController: UIViewController {
     @IBAction func FirstSettViewContrShow(_ sender: UIButton) {
 
     }
-    
-    func showInfoLabelText() {
+
+    func labelInfoText() {
         let userDefaults = UserDefaults.standard
         userDefaults.synchronize()
-        guard let bmrUD = userDefaults.object(forKey: Token.bmrToken.rawValue) as? Int
+    
+        guard let bmrUID = userDefaults.object(forKey: Token.bmrToken.rawValue)
             else { return }
-        print("\(bmrUD) BMR USER Defaults!!!!!")
+        print(bmrUID)
+       
         if nameInfo == nil || nameInfo!.isEmpty {
-            infoLabel.text = "Hello Friend, Welcome to Meal Schedule! Your settings status is/n your callory for one day is  "
+            infoLabel.text = "Hello Friend, Welcome to Meal Schedule! Your callory for one day \(bmrUID)"
         } else {
-            infoLabel.text = "Hello \(nameInfo ?? "Unknown Name"), Welcome to Meal Schedule! Your settings status is/n your callory for one day is  "
+            infoLabel.text = "Hello \(nameInfo ?? "Friend"), Welcome to Meal Schedule! " + " Your callory for one day \(bmrUID)"
         }
     }
 }
@@ -61,6 +66,6 @@ func uicolorFromHex(rgbValue:UInt32)->UIColor{
     let red = CGFloat((rgbValue & 0xFF0000) >> 16)/256.0
     let green = CGFloat((rgbValue & 0xFF00) >> 8)/256.0
     let blue = CGFloat(rgbValue & 0xFF)/256.0
-    
     return UIColor(red:red, green:green, blue:blue, alpha:1.0)
 }
+
