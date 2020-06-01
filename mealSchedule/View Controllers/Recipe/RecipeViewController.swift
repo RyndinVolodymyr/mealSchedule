@@ -70,7 +70,6 @@ extension RecipeViewController: UICollectionViewDelegate, UICollectionViewDataSo
                 let nextScene = segue.destination as! RecipeDetailViewController
                 let menuDet = menuArray[indexPath.row]
                 nextScene.menu = menuDet
-            
         }
     }
 }

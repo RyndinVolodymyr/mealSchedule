@@ -16,7 +16,7 @@ class ImageViewCell: UITableViewCell {
     }()
     
     var mainLabel: UILabel = {
-       var label = UILabel()
+        var label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = label.font.withSize(30)
         return label
