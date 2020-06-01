@@ -12,7 +12,7 @@ import FBSDKCoreKit
 import FirebaseAuth
 import UserNotifications
 import FirebaseMessaging
-//Coment
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, MessagingDelegate {
 
